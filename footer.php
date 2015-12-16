@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'dublin' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'dublin' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'dublin' ) ); ?>" rel="nofollow"><?php printf( __( 'Proudly powered by %s', 'dublin' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'dublin' ), 'Dublin', '<a href="http://justfreethemes.com/dublin" rel="nofollow">JustFreeThemes</a>' ); ?>
 		</div><!-- .site-info -->
