@@ -81,8 +81,8 @@ function dublin_customize_register( $wp_customize ) {
         'sidebar_widgets',
         array(
             'sanitize_callback' => 'dublin_sanitize_checkbox',
-            'default' => 0,         
-        )       
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'sidebar_widgets',
@@ -90,16 +90,16 @@ function dublin_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Hide the sidebar widgets on screen widths below 1024px', 'dublin'),
             'section' => 'dublin_general',
-            'priority' => 11,           
+            'priority' => 11,
         )
-    ); 
+    );
     //Footer widgets
     $wp_customize->add_setting(
         'footer_widgets',
         array(
             'sanitize_callback' => 'dublin_sanitize_checkbox',
-            'default' => 0,         
-        )       
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'footer_widgets',
@@ -107,9 +107,9 @@ function dublin_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Hide the footer widgets on screen widths below 1024px', 'dublin'),
             'section' => 'dublin_general',
-            'priority' => 12,           
+            'priority' => 12,
         )
-    );    
+    );
     //___Contact info___//
     $wp_customize->add_section(
         'dublin_top_contact',
@@ -123,7 +123,7 @@ function dublin_customize_register( $wp_customize ) {
         'contact_display',
         array(
             'sanitize_callback' => 'dublin_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'contact_display',
@@ -133,7 +133,7 @@ function dublin_customize_register( $wp_customize ) {
             'section'   => 'dublin_top_contact',
             'priority'  => 10,
         )
-    );    
+    );
     //Phone number
     $wp_customize->add_setting(
         'phone_number',
@@ -198,8 +198,8 @@ function dublin_customize_register( $wp_customize ) {
       'full_content',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
         'full_content',
@@ -216,7 +216,7 @@ function dublin_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '55',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -244,14 +244,14 @@ function dublin_customize_register( $wp_customize ) {
         'settings' => 'dublin_options[titles]',
         'priority' => 13
         ) )
-    );    
+    );
     //Hide date
     $wp_customize->add_setting(
       'dublin_date',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'dublin_date',
@@ -267,8 +267,8 @@ function dublin_customize_register( $wp_customize ) {
       'dublin_cats',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'dublin_cats',
@@ -298,8 +298,8 @@ function dublin_customize_register( $wp_customize ) {
       'dublin_single_date',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'dublin_single_date',
@@ -315,8 +315,8 @@ function dublin_customize_register( $wp_customize ) {
       'dublin_single_cats',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'dublin_single_cats',
@@ -332,8 +332,8 @@ function dublin_customize_register( $wp_customize ) {
       'dublin_single_tags',
       array(
         'sanitize_callback' => 'dublin_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'dublin_single_tags',
@@ -343,9 +343,9 @@ function dublin_customize_register( $wp_customize ) {
         'section' => 'blog_options',
         'priority' => 19,
       )
-    );           
+    );
     //___Colors___//
-     
+
     //Primary color
     $wp_customize->add_setting(
         'primary_color',
@@ -366,7 +366,7 @@ function dublin_customize_register( $wp_customize ) {
                 'priority' => 12
             )
         )
-    );    
+    );
     //Header bg
     $wp_customize->add_setting(
         'header_bg_color',
@@ -493,7 +493,7 @@ function dublin_customize_register( $wp_customize ) {
                 'priority' => 18
             )
         )
-    );    
+    );
     //Entry title
     $wp_customize->add_setting(
         'entry_title_color',
@@ -514,7 +514,7 @@ function dublin_customize_register( $wp_customize ) {
                 'priority' => 19
             )
         )
-    );  
+    );
     //Body
     $wp_customize->add_setting(
         'body_text_color',
@@ -544,9 +544,9 @@ function dublin_customize_register( $wp_customize ) {
             'priority' => 15,
         )
     );
-    $font_choices = 
+    $font_choices =
         array(
-            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',     
+            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
             'Droid Sans:400,700' => 'Droid Sans',
             'Lato:400,700,400italic,700italic' => 'Lato',
             'Arvo:400,700,400italic,700italic' => 'Arvo',
@@ -567,14 +567,14 @@ function dublin_customize_register( $wp_customize ) {
             'Yanone Kaffeesatz:400,700' => 'Yanone Kaffeesatz',
             'Rokkitt:400' => 'Rokkitt',
         );
-    
+
     $wp_customize->add_setting(
         'headings_fonts',
         array(
             'sanitize_callback' => 'dublin_sanitize_fonts',
         )
     );
-    
+
     $wp_customize->add_control(
         'headings_fonts',
         array(
@@ -584,14 +584,14 @@ function dublin_customize_register( $wp_customize ) {
             'choices' => $font_choices
         )
     );
-    
+
     $wp_customize->add_setting(
         'body_fonts',
         array(
             'sanitize_callback' => 'dublin_sanitize_fonts',
         )
     );
-    
+
     $wp_customize->add_control(
         'body_fonts',
         array(
@@ -600,7 +600,7 @@ function dublin_customize_register( $wp_customize ) {
             'section' => 'dublin_typography',
             'choices' => $font_choices
         )
-    );        
+    );
 }
 add_action( 'customize_register', 'dublin_customize_register' );
 
@@ -621,7 +621,7 @@ function dublin_no_sanitize() {
 //Fonts
 function dublin_sanitize_fonts( $input ) {
     $valid = array(
-            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',     
+            'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
             'Droid Sans:400,700' => 'Droid Sans',
             'Lato:400,700,400italic,700italic' => 'Lato',
             'Arvo:400,700,400italic,700italic' => 'Arvo',
@@ -642,7 +642,7 @@ function dublin_sanitize_fonts( $input ) {
             'Yanone Kaffeesatz:400,700' => 'Yanone Kaffeesatz',
             'Rokkitt:400' => 'Rokkitt',
     );
- 
+
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -660,3 +660,14 @@ function dublin_customize_preview_js() {
 	wp_enqueue_script( 'dublin_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '', true );
 }
 add_action( 'customize_preview_init', 'dublin_customize_preview_js' );
+
+function dublin_registers() {
+	wp_enqueue_script( 'dublin_customizer_script', get_template_directory_uri() . '/js/dublin_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'dublin_customizer_script', 'dublinCustomizerObject', array(
+		'github'				=> __('GitHub','dublin'),
+		'review'				=> __('Leave a Review', 'dublin'),
+		'documentation'	=> __('Documentation', 'dublin')
+		) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'dublin_registers' );

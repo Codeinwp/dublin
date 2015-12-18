@@ -95,7 +95,7 @@ function dublin_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );	
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer B', 'dublin' ),
 		'id'            => 'sidebar-4',
@@ -103,7 +103,7 @@ function dublin_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );	
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer C', 'dublin' ),
 		'id'            => 'sidebar-5',
@@ -111,7 +111,7 @@ function dublin_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );		
+	) );
 
 	//Register the custom widgets
 	register_widget( 'Dublin_Video' );
@@ -141,21 +141,21 @@ function dublin_scripts() {
 	$headings_font = get_theme_mod('headings_fonts');
 	$body_font = get_theme_mod('body_fonts');
 	if( $headings_font ) {
-		wp_enqueue_style( 'dublin-headings-fonts', '//fonts.googleapis.com/css?family='. esc_attr($headings_font) );	
+		wp_enqueue_style( 'dublin-headings-fonts', '//fonts.googleapis.com/css?family='. esc_attr($headings_font) );
 	} else {
 		wp_enqueue_style( 'dublin-headings-fonts', '//fonts.googleapis.com/css?family=Oswald:400');
-	}	
+	}
 	if( $body_font ) {
-		wp_enqueue_style( 'dublin-body-fonts', '//fonts.googleapis.com/css?family='. esc_attr($body_font) );	
+		wp_enqueue_style( 'dublin-body-fonts', '//fonts.googleapis.com/css?family='. esc_attr($body_font) );
 	} else {
 		wp_enqueue_style( 'dublin-body-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic');
-	}	
+	}
 
-	wp_enqueue_style( 'dublin-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
+	wp_enqueue_style( 'dublin-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
 
-	wp_enqueue_script( 'dublin-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), true );	
+	wp_enqueue_script( 'dublin-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), true );
 
-	wp_enqueue_script( 'dublin-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );	
+	wp_enqueue_script( 'dublin-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 
 	wp_enqueue_script( 'dublin-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -164,7 +164,7 @@ function dublin_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-    	
+
 }
 add_action( 'wp_enqueue_scripts', 'dublin_scripts' );
 
@@ -172,7 +172,7 @@ add_action( 'wp_enqueue_scripts', 'dublin_scripts' );
  * Excerpt length
  */
 function dublin_excerpt_length( $length ) {
-	
+
 	$excerpt = get_theme_mod('exc_lenght', '55');
 	return $excerpt;
 
@@ -187,7 +187,7 @@ function dublin_html5shiv() {
     echo '<script src="' . esc_url( get_template_directory_uri() . '/js/html5shiv.js' ) . '"></script>' . "\n";
     echo '<![endif]-->' . "\n";
 }
-add_action( 'wp_head', 'dublin_html5shiv' ); 
+add_action( 'wp_head', 'dublin_html5shiv' );
 
 /**
  * Row style for the page builder
@@ -232,20 +232,38 @@ require get_template_directory() . '/styles.php';
  *TGM Plugin activation.
  */
 require_once dirname( __FILE__ ) . '/tgm/class-tgm-plugin-activation.php';
- 
+
 add_action( 'tgmpa_register', 'dublin_recommend_plugin' );
 function dublin_recommend_plugin() {
- 
+
     $plugins = array(
-        array(
-            'name'               => 'Page Builder by SiteOrigin',
-            'slug'               => 'siteorigin-panels',
-            'required'           => false,
-        )       
+
+				array(
+            'name'      => 'Page Builder by SiteOrigin',
+            'slug'      => 'siteorigin-panels',
+            'required'  => false,
+        ),
+				array(
+						'name'      => 'WP Product Reviews',
+						'slug'      => 'wp-product-reviews',
+						'required'  => false,
+					),
+
+				array(
+						'name'      => 'Intergeo Maps - Google Maps Plugin',
+						'slug'      => 'intergeo-maps',
+						'required'  => false
+					),
+
+				array(
+						'name'     => 'Pirate Forms',
+						'slug' 	   => 'pirate-forms',
+						'required' => false
+					)
     );
- 
+
     tgmpa( $plugins);
- 
+
 }
 
 /**
