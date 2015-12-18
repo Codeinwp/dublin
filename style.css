@@ -1,8 +1,8 @@
 /*
 Theme Name: Dublin
-Theme URI: http://flyfreemedia.com/themes/dublin
-Author: Fly Free Media
-Author URI: http://flyfreemedia.com
+Theme URI: http://justfreethemes.com/dublin
+Author: JustFreeThemes
+Author URI: http://justfreethemes.com
 Description: Dublin is a business WordPress theme suitable for any kind of company that wants a strong online presence. It includes many options located in the powerful Customizer and it works best with our free plugin which brings tons of construction blocks for the your front page. You can also find the plugin on the theme page on our website.
 Version: 1.04
 License: GNU General Public License v2 or later
@@ -30,7 +30,7 @@ body {
 	font-size: 16px;
 }
 #page {
-	display: none;	
+	display: none;
 	-webkit-animation: fadein 0.5s;
 	animation: fadein 0.5s;
 }
@@ -340,7 +340,7 @@ Menus
 	display: none;
 }
 
-@media screen and (max-width: 991px) {	
+@media screen and (max-width: 991px) {
 	.menu-toggle {
 		margin: 0 auto;
 	}
@@ -706,7 +706,7 @@ Comments
 	border: 1px solid #3FB8AF;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	color: #3FB8AF;
@@ -1249,7 +1249,7 @@ FlyPack support
 	top: 40%;
 	font-size: 40px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 .project a:hover {
 	color: #000;
@@ -1470,7 +1470,7 @@ Social Menu
 	color: #ffffff;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
-	text-decoration: none;	
+	text-decoration: none;
 }
 .social-navigation li a[href*="twitter.com"]:hover {
 	color: #33ccff;
@@ -1510,7 +1510,7 @@ Social Menu
 }
 
 .panel-row-style {
-	display: block;			    
+	display: block;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -1534,7 +1534,7 @@ Social Menu
 	.top-slider {
 		margin-top: -30px !important;
 		margin-bottom: -30px !important;
-	}	
+	}
 	.video-header {
 		margin-top: -30px !important;
 		margin-bottom: -30px !important;
@@ -1550,13 +1550,13 @@ Responsive
 	}
 	.fullwidth {
 		width: 100%;
-	}	
+	}
 	.employee-social a {
 		margin: 5px;
-	}	
+	}
 	.employee-social a:last-of-type {
 		margin-right: 5px;
-	}	
+	}
 }
 @media only screen and (max-width: 991px) {
 	.widget-area,
@@ -1580,7 +1580,7 @@ Responsive
 	.contact-info,
 	.social-navigation {
 		text-align: center;
-	}	
+	}
 	.video-text {
 		top: 50px;
 	}
