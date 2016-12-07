@@ -2,8 +2,8 @@
 
 class Dublin_Video extends WP_Widget {
 
-// constructor
-    function dublin_video() {
+	// constructor
+	function __construct() {
 		$widget_ops = array('classname' => 'dublin_video_widget', 'description' => __( 'Display an oEmbed video.', 'dublin') );
         parent::__construct(false, $name = __('Dublin: Video', 'dublin'), $widget_ops);
 		$this->alt_option_name = 'dublin_video';
