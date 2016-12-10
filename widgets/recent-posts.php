@@ -3,7 +3,7 @@
 class Dublin_Recent_Posts extends WP_Widget {
 
 // constructor
-    function dublin_recent_posts() {
+    function __construct() {
 		$widget_ops = array('classname' => 'dublin_recent_posts_widget', 'description' => __( 'Display your site&#8217;s recent posts with thumbnails.', 'dublin') );
         parent::__construct(false, $name = __('dublin: Recent Posts', 'dublin'), $widget_ops);
 		$this->alt_option_name = 'dublin_recent_posts_widget';
