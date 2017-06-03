@@ -36,6 +36,9 @@ function dublin_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
+	// Add theme support for custom logo.
+	add_theme_support( 'custom-logo' );
+
 	// Set the content width based on the theme's design and stylesheet.
 	global $content_width;
 	if ( ! isset( $content_width ) ) {
@@ -292,3 +295,17 @@ function dublin_migrate_favicon(){
 	}
 }
 add_action( 'after_setup_theme', 'dublin_migrate_favicon' );
+
+/**
+ * Migrate logo from theme to core
+ */
+function dublin_migrate_logo(){
+	if ( get_theme_mod('site-logo') ) {
+		$logo = attachment_url_to_postid( get_theme_mod( 'site-logo' ) );
+		if ( is_int( $logo ) ) {
+			set_theme_mod( 'custom_logo', $logo );
+		}
+		remove_theme_mod( 'site-logo' );
+	}
+}
+add_action( 'after_setup_theme', 'dublin_migrate_logo' );
