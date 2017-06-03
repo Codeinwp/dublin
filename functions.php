@@ -143,7 +143,7 @@ require get_template_directory() . "/widgets/recent-comments.php";
  */
 function dublin_scripts() {
 
-	wp_enqueue_style( 'dublin-bootstrap', get_template_directory_uri() . '/css/bootstrap/css/bootstrap.min.css', array(), true );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap/css/bootstrap.min.css', array(), true );
 
 	wp_enqueue_style( 'dublin-style', get_stylesheet_uri() );
 
@@ -160,9 +160,9 @@ function dublin_scripts() {
 		wp_enqueue_style( 'dublin-body-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic');
 	}
 
-	wp_enqueue_style( 'dublin-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
 
-	wp_enqueue_script( 'dublin-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), true );
+	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), true );
 
 	wp_enqueue_script( 'dublin-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 
