@@ -282,3 +282,19 @@ if ( function_exists('siteorigin_panels_activate') ) {
 	remove_action('wp_head', 'siteorigin_panels_print_inline_css');
 	add_action('wp_head', 'siteorigin_panels_print_inline_css', 1);
 }
+
+/**
+ * Migrate favicon from theme favicon to core
+ */
+function dublin_migrate_favicon(){
+	if ( function_exists( 'wp_site_icon' ) ) {
+		if ( get_theme_mod('site_favicon') ) {
+			$id = attachment_url_to_postid( get_theme_mod('site_favicon') );
+			if ( is_int( $id ) ) {
+				update_option( 'site_icon', $id );
+			}
+			remove_theme_mod( 'site_favicon' );
+		}
+	}
+}
+add_action( 'after_setup_theme', 'dublin_migrate_favicon' );
