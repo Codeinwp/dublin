@@ -48,12 +48,22 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding col-md-4 col-sm-12">
-				<?php if( has_custom_logo() ) : ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('custom_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-				<?php else : ?>
+
+				<?php if( has_custom_logo() ) {
+
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+					if ( ! empty( $image ) ) {
+
+						echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '"><img class="site-logo" src="' . esc_url( $image[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"/></a>';
+
+					}
+				} else { ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php endif; ?>
+				<?php } ?>
+
 			</div>
 
 			<nav id="site-navigation" class="main-navigation col-md-8 col-sm-12" role="navigation">
