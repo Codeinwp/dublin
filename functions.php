@@ -245,20 +245,9 @@ function dublin_recommend_plugin() {
     $plugins = array(
 
 				array(
-            'name'      => 'Page Builder by SiteOrigin',
-            'slug'      => 'siteorigin-panels',
-            'required'  => false,
-        ),
-				array(
-						'name'      => 'WP Product Reviews',
-						'slug'      => 'wp-product-reviews',
+						'name'      => 'Orbit Fox',
+						'slug'      => 'themeisle-companion',
 						'required'  => false,
-					),
-
-				array(
-						'name'      => 'Intergeo Maps - Google Maps Plugin',
-						'slug'      => 'intergeo-maps',
-						'required'  => false
 					),
 
 				array(
